@@ -1,10 +1,10 @@
 package iv.root.railway.model.route
 
+import iv.root.railway.model.station.Station
 import lombok.Data
 import java.io.Serializable
 import javax.persistence.*
 
-@Data
 @Entity(name = "route")
 data class Route (
         @Id
@@ -12,5 +12,8 @@ data class Route (
         @Column(name = "id", nullable = false, unique = true)
         var id: Long,
         @Column(name = "name", nullable = false)
-        var name: String
+        var name: String,
+// ---------------------
+        @OneToMany(mappedBy = "route", orphanRemoval = true)
+        var stations: Set<Station>
 ): Serializable
