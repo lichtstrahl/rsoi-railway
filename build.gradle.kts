@@ -34,7 +34,9 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
+	// JPA
 	implementation("javax.persistence:javax.persistence-api:2.2")
+	implementation("org.springframework.data:spring-data-jpa:2.2.1.RELEASE")
 }
 
 tasks.withType<Test> {
