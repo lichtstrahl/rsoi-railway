@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://206.81.20.220/subway?useUnicode=yes&characterEncoding=utf8&reconnect=true
+    url: jdbc:mysql://206.81.20.220/railway?useUnicode=yes&characterEncoding=utf8&reconnect=true
     username: igor
     password: igor
     hikari:
